@@ -140,7 +140,7 @@ public sealed class ObjectPool : MonoBehaviour
 		{
 			obj = (GameObject)Object.Instantiate(prefab);
 			trans = obj.GetComponent<Transform>();
-			trans.parent = parent;
+			trans.SetParent(parent);
 			trans.localPosition = position;
 			trans.localRotation = rotation;
 			return obj;
