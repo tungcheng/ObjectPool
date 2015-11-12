@@ -68,7 +68,8 @@ public sealed class ObjectPool : MonoBehaviour
 				while (list.Count < initialPoolSize)
 				{
 					var obj = (GameObject)Object.Instantiate(prefab);
-					obj.transform.parent = parent;
+					//obj.transform.parent = parent;
+					obj.transform.SetParent(parent);
 					list.Add(obj);
 				}
 				prefab.SetActive(active);
